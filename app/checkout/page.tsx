@@ -22,7 +22,7 @@ export default function CheckoutPage() {
   if (cartItems.length === 0) {
     return (
       <div className="max-w-4xl mx-auto py-12 text-center">
-        <h1 className="text-2xl font-bold mb-4">Your cart is empty</h1>
+        <h1 className="text-2xl font-bold mb-4 text-black">Your cart is empty</h1>
         <Link 
           href="/" 
           className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -35,12 +35,12 @@ export default function CheckoutPage() {
 
   return (
     <div className="max-w-6xl mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-8">Checkout</h1>
+      <h1 className="text-3xl font-bold mb-8 text-black">Checkout</h1>
       
       <div className="grid md:grid-cols-3 gap-8">
         {/* Order Summary */}
         <div className="md:col-span-2 bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold mb-6">Order Summary</h2>
+          <h2 className="text-xl font-semibold mb-6 text-black">Order Summary</h2>
           
           <div className="divide-y">
             {cartItems.map((item) => (
@@ -76,7 +76,7 @@ export default function CheckoutPage() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="font-medium">
+                  <p className="font-medium text-black">
                     ${(item.price * item.quantity).toFixed(2)}
                   </p>
                   <button 
@@ -91,7 +91,7 @@ export default function CheckoutPage() {
           </div>
 
           <div className="border-t pt-4 mt-4">
-            <div className="flex justify-between font-semibold text-lg">
+            <div className="flex justify-between font-semibold text-lg text-black">
               <span>Total:</span>
               <span>${cartTotal.toFixed(2)}</span>
             </div>
@@ -100,7 +100,7 @@ export default function CheckoutPage() {
 
         {/* Checkout Form */}
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold mb-6">Shipping Information</h2>
+          <h2 className="text-xl font-semibold mb-6 text-black">Shipping Information</h2>
           
           <form onSubmit={handleSubmit}>
             <div className="space-y-4">

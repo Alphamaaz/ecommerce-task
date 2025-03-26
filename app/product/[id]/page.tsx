@@ -33,7 +33,7 @@ export default async function ProductPage({
         </div>
         <div className="md:w-1/2 p-6">
           <span className="text-sm text-gray-500">{product.category}</span>
-          <h1 className="text-2xl font-bold mt-2">{product.title}</h1>
+          <h1 className="text-2xl font-bold mt-2 text-black">{product.title}</h1>
           <p className="text-xl font-semibold text-gray-800 my-4">
             ${product.price.toFixed(2)}
           </p>

@@ -12,7 +12,7 @@ export default function CartPage() {
       
       {cartItems.length === 0 ? (
         <div className="text-center py-12">
-          <p className="text-lg mb-4">Your cart is empty</p>
+          <p className="text-lg mb-4 text-black">Your cart is empty</p>
           <Link 
             href="/" 
             className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -32,7 +32,7 @@ export default function CartPage() {
                     className="w-16 h-16 object-contain"
                   />
                   <div>
-                    <h3 className="font-medium">{item.title}</h3>
+                    <h3 className="font-medium text-black">{item.title}</h3>
                     <p className="text-gray-600">${item.price.toFixed(2)} × {item.quantity}</p>
                   </div>
                 </div>
@@ -47,8 +47,8 @@ export default function CartPage() {
           </div>
           <div className="p-4 border-t">
             <div className="flex justify-between items-center">
-              <span className="font-semibold">Total:</span>
-              <span className="text-xl font-bold">${cartTotal.toFixed(2)}</span>
+              <span className="font-semibold text-black">Total:</span>
+              <span className="text-xl font-bold text-black">${cartTotal.toFixed(2)}</span>
             </div>
             <Link
   href="/checkout"
